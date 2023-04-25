@@ -34,7 +34,7 @@ npm install --save svelte-tel-input
 
 ```html
 <script lang="ts">
-	import { TelInput, normalizedCountries } from 'svelte-tel-input';
+	import { IonTelInput, normalizedCountries } from 'svelte-tel-input';
 	import type { NormalizedTelNumber, CountryCode, E164Number } from 'svelte-tel-input/types';
 
 	// Any Country Code Alpha-2 (ISO 3166)
@@ -68,7 +68,7 @@ npm install --save svelte-tel-input
 			</option>
 		{/each}
 	</select>
-    <TelInput bind:country bind:value bind:valid bind:parsedTelInput class="basic-tel-input {!isValid && 'invalid'}" />
+    <IonTelInput bind:country bind:value bind:valid bind:parsedTelInput class="basic-tel-input {!isValid && 'invalid'}" />
 </div>
 
 <style>

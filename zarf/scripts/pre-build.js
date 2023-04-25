@@ -7,3 +7,4 @@ import { readFileSync, writeFileSync } from 'fs';
 writeFileSync('package.json', del(readFileSync('package.json').toString(), 'exports'));
 // Remove types field of ../package.json
 writeFileSync('package.json', del(readFileSync('package.json').toString(), 'types'));
+writeFileSync('package.json', del(readFileSync('package.json').toString(), 'svelte'));

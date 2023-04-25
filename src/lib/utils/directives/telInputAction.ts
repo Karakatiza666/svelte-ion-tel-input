@@ -1,6 +1,8 @@
-import { inspectAllowedChars, inputParser } from '$lib';
+import { inspectAllowedChars, inputParser } from '$lib/index';
+import { } from '@ionic/core'
+
 export const telInputAction = (
-	node: HTMLInputElement,
+	node: HTMLIonInputElement,
 	{
 		handler,
 		spaces
@@ -10,8 +12,8 @@ export const telInputAction = (
 	}
 ) => {
 	const onInput = (event: Event) => {
-		if (node && node.contains(event.target as HTMLInputElement)) {
-			const value = (event.target as HTMLInputElement).value;
+		if (node && node.contains(event.target as HTMLIonInputElement)) {
+			const value = (event.target as HTMLIonInputElement).value;
 			const formattedInput = inputParser(value, {
 				parseCharacter: inspectAllowedChars,
 				allowSpaces: spaces

@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { normalizedCountries } from '$lib/assets';
 	import { clickOutsideAction } from '$lib/utils/directives/clickOutsideAction';
-	import TelInput from '$lib/components/Input/TelInput.svelte';
+	import IonTelInput from '$lib/components/Input/IonTelInput.svelte';
 	import { isSelected } from '$lib/utils/helpers';
 	import type {
 		NormalizedTelNumber,
@@ -179,7 +179,7 @@
 		{/if}
 	</div>
 
-	<TelInput
+	<IonTelInput
 		id="tel-input"
 		bind:country={selectedCountry}
 		bind:parsedTelInput

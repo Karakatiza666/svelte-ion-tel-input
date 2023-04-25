@@ -8,12 +8,14 @@ writeFileSync('package.json', del(readFileSync('package.json').toString(), 'type
 let packageJson = readFileSync('package.json').toString();
 packageJson = packageJson.slice(0, packageJson.lastIndexOf('}') - 1); //strip closing }
 packageJson += `,
-	"types": "./src/lib/types/index.d.ts",
 	"exports": {
-		".": "./src/lib/index.ts",
-		"./styles/*": "./src/lib/styles/flags.css",
-		"./types/*": "./src/lib/types/*"
-	}
+		"./package.json": "./package.json",
+		".": "./package/index.js",
+		"./styles/flags.css": "./styles/flags.css",
+		"./types": "./package/types/index.d.ts"
+	},
+	"types": "./package/index.d.ts",
+	"svelte": "./package/index.js"
 }
 `;
 writeFileSync('package.json', packageJson);

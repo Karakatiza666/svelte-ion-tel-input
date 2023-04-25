@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TelInput from '$lib/components/Input/TelInput.svelte';
+	import IonTelInput from '$lib/components/Input/IonTelInput.svelte';
 	import { normalizedCountries } from '$lib/assets';
 	import type { NormalizedTelNumber, E164Number, CountryCode } from '$lib/types';
 
@@ -44,7 +44,7 @@
 		{/each}
 	</select>
 
-	<TelInput
+	<IonTelInput
 		bind:country
 		bind:valid
 		bind:value

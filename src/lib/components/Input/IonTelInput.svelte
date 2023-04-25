@@ -154,7 +154,7 @@
 		: placeholder;
 </script>
 
-<input
+<ion-input
 	{required}
 	placeholder={getPlaceholder}
 	{disabled}
@@ -167,6 +167,10 @@
 	on:change
 	on:focus
 	on:input
+   on:ionBlur
+   on:ionChange
+   on:ionFocus
+   on:ionInput
 	on:keydown
 	on:keypress
 	on:keyup
